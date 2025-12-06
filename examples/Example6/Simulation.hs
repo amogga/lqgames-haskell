@@ -14,15 +14,12 @@ import Type.Dynamics
 import Dynamics.MultiModels
 import Dynamics.Models
 
-simParamsMaxT :: SimulationParameters
-simParamsMaxT = SimulationParametersWithMaxTime {iterationCount = 50, sample = 0.25, maxTime = 15}
-
 simParamsHorizon :: SimulationParameters
-simParamsHorizon = SimulationParametersWithHorizon { iterationCount = 50, sample = 0.25, horizon = 24 }
+simParamsHorizon = SimulationParametersWithHorizon { iterationCount = 100, sample = 0.1, horizon = 100 }
 
 initState :: Vector R
-initState = vector [-2, -30.0, pi / 2.0 , 5.0,
-                    -2, 30.0, -(pi / 2.0), 5.0]
+initState = vector [-2, -30.0, pi / 2.0 , 8.0,
+                    -2, 30.0, -(pi / 2.0), 8.0]
 
 initInput :: Vector R
 initInput = vector [0,0,0,0]

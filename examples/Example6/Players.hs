@@ -18,7 +18,7 @@ player1 = let
               -- state and input costs (car heading north in head-on scenario)
               costInfo1 = I.CostInfo4 { I.goal = Position (-2.0,50.0),
                                       I.lane = [[-2.0,-1000.0],[-2.0,1000.0]], I.laneBoundary = 2.5,
-                                      I.minVelocity = 0, I.maxVelocity = 8, I.nominalVelocity = 5,
+                                      I.minVelocity = 0, I.maxVelocity = 10, I.nominalVelocity = 10,
                                       I.nominalHeading = pi/2,
                                       I.proximity = 6
                                     }
@@ -26,12 +26,12 @@ player1 = let
               -- state and input weights
               stateWeight1 = W.StateWeight4 { W.goal = 1,
                                             W.lane = 25, W.laneBoundary = 3,
-                                            W.minVelocity = 10, W.maxVelocity = 10, W.nominalVelocity = 100,
+                                            W.minVelocity = 10, W.maxVelocity = 10, W.nominalVelocity = 10,
                                             W.nominalHeading = 10,
-                                            W.proximity = 10
+                                            W.proximity = 100
                                           }
 
-              inputWeight1 = W.InputWeight1 { W.angularVelocity = 5,
+              inputWeight1 = W.InputWeight1 { W.angularVelocity = 10,
                                               W.acceleration = 10 }
 
 
@@ -56,13 +56,12 @@ player1 = let
                       color = sRGB24read "#cd5c5c" -- red
                   }
 
-
 player2 :: Floating a => Player a
 player2 = let
               -- state and input costs (car heading south in head-on scenario)
               costInfo1 = I.CostInfo4 { I.goal = Position (-2.0,-50.0),
                                       I.lane = [[-2.0,-1000.0],[-2.0,1000.0]], I.laneBoundary = 2.5,
-                                      I.minVelocity = 0, I.maxVelocity = 8, I.nominalVelocity = 5,
+                                      I.minVelocity = 0, I.maxVelocity = 10, I.nominalVelocity = 10,
                                       I.nominalHeading = -(pi/2),
                                       I.proximity = 6
                                     }
@@ -70,9 +69,9 @@ player2 = let
               -- state and input weights
               stateWeight1 = W.StateWeight4 { W.goal = 1,
                                             W.lane = 25, W.laneBoundary = 3,
-                                            W.maxVelocity = 10, W.minVelocity = 10, W.nominalVelocity = 100,
+                                            W.maxVelocity = 10, W.minVelocity = 10, W.nominalVelocity = 10,
                                             W.nominalHeading = 10,
-                                            W.proximity = 10
+                                            W.proximity = 1
                                           }
 
               inputWeight1 = W.InputWeight1 { W.angularVelocity = 5,
@@ -89,7 +88,6 @@ player2 = let
                                           accelerationInputIndex = 3,
                                           allInputs = inputsIndices
                                         }
-
 
             in Car {
                     stateIndex = stateIndex1,

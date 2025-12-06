@@ -26,7 +26,7 @@ totalCost player@(Car _ inputIdx _ stateWgt inputWght _) states input =
       accelerationCostVal = input !! accelerationInputIndex inputIdx
   in
       -- progress
-      -- W.goal stateWgt * goalCostVal +
+      W.goal stateWgt * goalCostVal +
 
       W.nominalVelocity stateWgt * nominalVelocityVal +
       -- W.nominalHeading stateWgt * nominalHeadingVal +
