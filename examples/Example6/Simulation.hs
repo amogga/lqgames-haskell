@@ -15,11 +15,11 @@ import Dynamics.MultiModels
 import Dynamics.Models
 
 simParamsHorizon :: SimulationParameters
-simParamsHorizon = SimulationParametersWithHorizon { iterationCount = 100, sample = 0.1, horizon = 100 }
+simParamsHorizon = SimulationParametersWithHorizon { iterationCount = 400, sample = 0.1, horizon = 100 }
 
 initState :: Vector R
-initState = vector [-2, -30.0, pi / 2.0 , 8.0,
-                    -2, 30.0, -(pi / 2.0), 8.0]
+initState = vector [-2, -30.0, pi / 2.0 , 5.0,
+                    -2, 30.0, -(pi / 2.0), 5.0]
 
 initInput :: Vector R
 initInput = vector [0,0,0,0]

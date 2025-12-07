@@ -28,7 +28,7 @@ player1 = let
                                             W.lane = 25, W.laneBoundary = 3,
                                             W.minVelocity = 10, W.maxVelocity = 10, W.nominalVelocity = 10,
                                             W.nominalHeading = 10,
-                                            W.proximity = 100
+                                            W.proximity = 30
                                           }
 
               inputWeight1 = W.InputWeight1 { W.angularVelocity = 10,
@@ -71,7 +71,7 @@ player2 = let
                                             W.lane = 25, W.laneBoundary = 3,
                                             W.maxVelocity = 10, W.minVelocity = 10, W.nominalVelocity = 10,
                                             W.nominalHeading = 10,
-                                            W.proximity = 1
+                                            W.proximity = 30
                                           }
 
               inputWeight1 = W.InputWeight1 { W.angularVelocity = 5,
