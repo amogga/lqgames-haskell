@@ -28,3 +28,5 @@ cradle:
               component: "lq-games:bench:bench1"
             - path: "./bench/bench2"
               component: "lq-games:bench:bench2"
+            - path: "./bench/bench3"
+              component: "lq-games:bench:bench3"

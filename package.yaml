@@ -169,3 +169,14 @@ benchmarks:
     - criterion
     - lq-games
     - deepseq
+  bench3:
+    main: Benchmark.hs
+    source-dirs: bench/bench3
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - criterion
+    - lq-games
+    - deepseq
