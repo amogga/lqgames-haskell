@@ -19,7 +19,6 @@ totalCost player@(Car _ inputIdx _ stateWgt inputWght _) states input =
       maxVelCostVal = maximumVelocityCost player states
       minVelCostVal = minimumVelocityCost player states
       nominalVelocityVal = nominalVelocityCost player states
-      nominalHeadingVal = nominalHeadingCost player states
       laneCostVal =  laneCost player states
       laneBoundaryCostVal = laneBoundaryCost player states
       angularVelocityCostVal = input !! angularVelocityInputIndex inputIdx
@@ -29,7 +28,6 @@ totalCost player@(Car _ inputIdx _ stateWgt inputWght _) states input =
       W.goal stateWgt * goalCostVal +
 
       W.nominalVelocity stateWgt * nominalVelocityVal +
-      -- W.nominalHeading stateWgt * nominalHeadingVal +
 
       -- stay in lane
       W.lane stateWgt * laneCostVal + 

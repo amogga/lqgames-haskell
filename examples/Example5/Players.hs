@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-missing-fields #-}
 module Players where
 
 import Type.Player
@@ -19,7 +20,6 @@ player1 = let
               costInfo1 = I.CostInfo4 { I.goal = Position (-2.0,50.0),
                                       I.lane = [[-2.0,-1000.0],[-2.0,1000.0]], I.laneBoundary = 2.5,
                                       I.minVelocity = 0, I.maxVelocity = 10, I.nominalVelocity = 10,
-                                      I.nominalHeading = pi/2,
                                       I.proximity = 3
                                     }
 
@@ -27,7 +27,6 @@ player1 = let
               stateWeight1 = W.StateWeight4 { W.goal = 10,
                                             W.lane = 50, W.laneBoundary = 50,
                                             W.minVelocity = 50, W.maxVelocity = 50, W.nominalVelocity = 50,
-                                            W.nominalHeading = 30,
                                             W.proximity = 15
                                           }
 
@@ -62,7 +61,6 @@ player2 = let
               costInfo1 = I.CostInfo4 { I.goal = Position (-2.0,50.0),
                                       I.lane = [[-2.0,-1000.0],[-2.0,1000.0]], I.laneBoundary = 2.5,
                                       I.minVelocity = 0, I.maxVelocity = 5, I.nominalVelocity = 2,
-                                      I.nominalHeading = pi/2,
                                       I.proximity = 3
                                     }
 
@@ -70,7 +68,6 @@ player2 = let
               stateWeight1 = W.StateWeight4 { W.goal = 1,
                                             W.lane = 50, W.laneBoundary = 50,
                                             W.maxVelocity = 50, W.minVelocity = 50, W.nominalVelocity = 100,
-                                            W.nominalHeading = 50,
                                             W.proximity = 0
                                           }
 
