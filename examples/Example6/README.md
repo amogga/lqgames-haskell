@@ -4,6 +4,8 @@
 
 This example demonstrates a two-player dynamic game where two vehicles approach each other head-on in the same lane, requiring coordinated collision avoidance. Both vehicles use unicycle dynamics and must negotiate which direction to deviate to avoid collision while solving for a Nash equilibrium through iterative LQ approximation.
 
+<img src="https://pub-research.s3.eu-de.cloud-object-storage.appdomain.cloud/github/lqgames/ex6anim.gif" height="600">
+
 ## Scenario Description
 
 Two vehicles start on the same lane but traveling in opposite directions, creating a head-on collision scenario:

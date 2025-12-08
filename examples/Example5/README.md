@@ -4,6 +4,8 @@
 
 This example demonstrates a two-player dynamic game where a faster vehicle overtakes a slower vehicle on a single-lane road. Both vehicles use unicycle dynamics and solve a Nash equilibrium through iterative LQ approximation.
 
+<img src="https://pub-research.s3.eu-de.cloud-object-storage.appdomain.cloud/github/lqgames/ex5anim.gif" height="600">
+
 ## Scenario Description
 
 Two vehicles start in the same lane, traveling in the same direction (northbound, heading = π/2):
